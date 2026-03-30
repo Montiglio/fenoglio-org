@@ -1,0 +1,87 @@
+﻿# Fenoglio-org static website
+
+## Structure
+- index.html
+- about.html
+- musegame.html
+- contact.html
+- assets/css/style.css
+- assets/js/main.js
+- assets/img (graphics placeholder)
+- robots.txt
+- sitemap.xml
+
+## Editing text
+- Edit page copy in each HTML file under the `<main>` section.
+- Keep all content semantic and concise.
+
+## Updating abstract graphics
+- Replace or add SVG, PNG files in `assets/img/`.
+- Use CSS shapes provided by `assets/css/style.css` for non-image abstract elements.
+
+## SEO metadata updates
+- Update `<title>`, `<meta name="description">`, `<link rel="canonical">`, and OG meta properties in each page header.
+- `sitemap.xml` should list any new public page URLs.
+- Ensure structured data in `<script type="application/ld+json">` remains valid.
+
+## Google Form configuration
+- In `contact.html`, replace `GOOGLE_FORM_URL_HERE` with the actual Google Form link.
+- Optional: replace the button target and include embed code placeholder where noted with `GOOGLE_FORM_EMBED_HERE` if adding embedded form later.
+
+## Deploying as a static site
+- Copy all files to standard static hosting (Netlify, GitHub Pages, Vercel, etc.).
+- Ensure root domain mapping to `fenoglio-org.net`.
+- Confirm `CNAME` file already exists with `Fenoglio-org.net`.
+
+## Legal/footer updates
+- Update corporate/legal details in all footer sections and contact references.
+- Update privacy note in `contact.html` when full policy text is ready.
+cd 'c:\Users\Ferruccio\Documents\GitHub\fenoglio-org'; @'
+:root {
+  --bg: #f7f3eb;
+  --text: #1a1a1a;
+  --muted: #58585e;
+  --surface: #ffffff;
+  --border: #ccc8c2;
+  --structure: #7d828b;
+  --accent: #265d5f;
+  --accent-soft: #e8f0f1;
+  --shadow: 0 8px 20px rgba(0,0,0,.06);
+  --radius: .6rem;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;background:var(--bg);color:var(--text);scroll-behavior:smooth}
+body{min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:clamp(280px,90vw,1100px);margin:0 auto;padding:1.5rem 1rem}
+.site-header{position:sticky;top:0;z-index:20;background:#ffffffcc;backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.brand{font-weight:700;font-size:1.1rem;letter-spacing:.03em;color:var(--text);font-family:"Georgia","Times New Roman",serif;}
+.main-nav a{margin-left:1.05rem;font-size:.95rem;color:var(--muted);padding:.45rem .5rem;border-radius:.35rem}
+.main-nav a:hover,.main-nav a:focus-visible{color:var(--text);background:var(--accent-soft);outline:2px solid #7ab0b3;outline-offset:2px}
+.btn,.btn-secondary{display:inline-block;font-weight:600;padding:.6rem 1rem;border-radius:.5rem;transition:.2s ease;background:var(--accent);color:#fff;border:1px solid var(--accent)}
+.btn:hover,.btn:focus-visible{background:#1f4c51;box-shadow:0 6px 14px rgba(0,0,0,.15);outline:none}
+.btn-outline{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+.btn-outline:hover{background:var(--accent-soft);}
+.btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+.section{padding:2rem 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(20px);transition:opacity .5s ease, transform .5s ease}
+.section.visible{opacity:1;transform:translateY(0)}
+.section-primary{padding:3rem 0 2rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.label{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+h1{font-size:clamp(1.5rem,2.5vw,2.4rem);font-weight:700;line-height:1.2;margin-bottom:.75rem;font-family:"Georgia","Times New Roman",serif}
+h2{font-size:clamp(1.3rem,2vw,1.8rem);font-weight:700;margin-bottom:.75rem;font-family:"Georgia","Times New Roman",serif}
+h3{font-size:1.1rem;margin-bottom:.45rem}
+p,li{color:var(--muted);font-size:1rem}
+.actions .btn{margin-right:.8rem}
+.focus-grid .cards,.team .cards,.field-grid{display:grid;gap:1rem}
+.card,.field-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+.feature-card{border-color:var(--accent)}
+.footer-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+.site-footer{margin-top:auto;padding:1.5rem 0;background:#fff;border-top:1px solid var(--border)}
+.brand-footer{font-weight:700;font-size:1rem;margin-bottom:.25rem}
+.copyright{font-size:.85rem;color:#6a6a6a;margin-top:1rem}
+@media (min-width:768px){.container{padding:2rem}.focus-grid .cards,.team .cards{grid-template-columns:repeat(3,minmax(0,1fr))}.field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.main-nav a{margin-left:1.25rem}.header-inner{padding:1rem 0}}
+@media (max-width:767px){.main-nav{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem}.header-inner{flex-direction:column;align-items:flex-start}.site-footer{font-size:.94rem}.focus-grid .cards,.team .cards,.field-grid{grid-template-columns:1fr}}
+:focus-visible{outline:2px solid #245a5d;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition-duration:0.01ms!important;animation-duration:0.01ms!important}} 

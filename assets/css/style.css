@@ -1,43 +1,4 @@
-﻿# Fenoglio-org static website
-
-## Structure
-- index.html
-- about.html
-- musegame.html
-- contact.html
-- assets/css/style.css
-- assets/js/main.js
-- assets/img (graphics placeholder)
-- robots.txt
-- sitemap.xml
-
-## Editing text
-- Edit page copy in each HTML file under the `<main>` section.
-- Keep all content semantic and concise.
-
-## Updating abstract graphics
-- Replace or add SVG, PNG files in `assets/img/`.
-- Use CSS shapes provided by `assets/css/style.css` for non-image abstract elements.
-
-## SEO metadata updates
-- Update `<title>`, `<meta name="description">`, `<link rel="canonical">`, and OG meta properties in each page header.
-- `sitemap.xml` should list any new public page URLs.
-- Ensure structured data in `<script type="application/ld+json">` remains valid.
-
-## Google Form configuration
-- In `contact.html`, replace `GOOGLE_FORM_URL_HERE` with the actual Google Form link.
-- Optional: replace the button target and include embed code placeholder where noted with `GOOGLE_FORM_EMBED_HERE` if adding embedded form later.
-
-## Deploying as a static site
-- Copy all files to standard static hosting (Netlify, GitHub Pages, Vercel, etc.).
-- Ensure root domain mapping to `fenoglio-org.net`.
-- Confirm `CNAME` file already exists with `Fenoglio-org.net`.
-
-## Legal/footer updates
-- Update corporate/legal details in all footer sections and contact references.
-- Update privacy note in `contact.html` when full policy text is ready.
-cd 'c:\Users\Ferruccio\Documents\GitHub\fenoglio-org'; @'
-:root {
+﻿:root {
   --bg: #f7f3eb;
   --text: #1a1a1a;
   --muted: #58585e;
@@ -84,4 +45,4 @@ p,li{color:var(--muted);font-size:1rem}
 @media (min-width:768px){.container{padding:2rem}.focus-grid .cards,.team .cards{grid-template-columns:repeat(3,minmax(0,1fr))}.field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.main-nav a{margin-left:1.25rem}.header-inner{padding:1rem 0}}
 @media (max-width:767px){.main-nav{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem}.header-inner{flex-direction:column;align-items:flex-start}.site-footer{font-size:.94rem}.focus-grid .cards,.team .cards,.field-grid{grid-template-columns:1fr}}
 :focus-visible{outline:2px solid #245a5d;outline-offset:2px}
-@media (prefers-reduced-motion:reduce){*{transition-duration:0.01ms!important;animation-duration:0.01ms!important}} 
+@media (prefers-reduced-motion:reduce){*{transition-duration:0.01ms!important;animation-duration:0.01ms!important}}
